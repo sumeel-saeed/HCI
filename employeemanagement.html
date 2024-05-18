@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U92 DONNER KING</title>
+    <!-- Add your CSS styles or external stylesheets here -->
+    WELLCOME TO UA92 DONNER
+</head>
+<body>
+<style>
+    {    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+ {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #0066cc;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    form {
+        max-width: 100%;
+    }
+}
+
+/* Accessibility Styles */
+input:focus,
+button:focus {
+    outline: 2px solid #4caf50;
+    outline-offset: 2px;
+}
+
+/* Styles for Disabled Users */
+body.inverted {
+    filter: invert(1);
+}
+</style>
+<form method="post" action="employeemanagement.php" method="post">
+    <label for="FirstName">First Name:</label>
+    <input type="text" name="FirstName" id="FirstName" required>
+    <br>
+
+    <label for="LastName">Last Name:</label>
+    <input type="text" name="LastName" id="LastName" required>
+    <br>
+
+    <label for="Address">Address:</label>
+    <input type="text" name="Address" id="Address" required>
+    <br>
+
+    <label for="Email">Email:</label>
+    <input type="text" name="Email" id="Email" required>
+    <br>
+ 
+    <label for="Password">Password:</label>
+    <input type="Password" name="Password" id="Password" required>
+    <br>
+
+    <label for="StaffRole">Staff Role:</label>
+    <input type="text" name="StaffRole" id="StaffRole" required>
+    <br>
+ 
+    <button type="submit">Enter Details</button>
+</form>
+ 
+<p>Don't have an account? <a href="registration.php">Register here</a></p>
+</body>
+</html>
+

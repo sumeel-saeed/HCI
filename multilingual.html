@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Language Inventory Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c6641;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(12, 90, 126, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #27097a;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Multi-Language Inventory Management</h1>
+    </header>
+
+    <main>
+        <label for="languageSelection">Select Language</label>
+        <select id="languageSelection" name="languageSelection" aria-label="Select Language">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <!-- Add more language options as needed -->
+        </select>
+
+        <button onclick="changeLanguage()">Change Language</button>
+
+        <p id="greeting">Welcome to the Inventory Management System!</p>
+        <p id="instruction">Select a language and click "Change Language" to see the change.</p>
+    </main>
+
+    <script>
+        function changeLanguage() {
+            var selectedLanguage = document.getElementById('languageSelection').value;
+            var greetingElement = document.getElementById('greeting');
+            var instructionElement = document.getElementById('instruction');
+
+            switch (selectedLanguage) {
+                case 'en':
+                    greetingElement.innerText = 'Welcome to the Inventory Management System!';
+                    instructionElement.innerText = 'Select a language and click "Change Language" to see the change.';
+                    break;
+                case 'fr':
+                    greetingElement.innerText = 'Bienvenue dans le Système de Gestion des Stocks!';
+                    instructionElement.innerText = 'Sélectionnez une langue et cliquez sur "Changer de Langue" pour voir le changement.';
+                    break;
+                // Add cases for additional languages
+                default:
+                    // Default to English if the selected language is not recognized
+                    greetingElement.innerText = 'Welcome to the Inventory Management System!';
+                    instructionElement.innerText = 'Select a language and click "Change Language" to see the change.';
+            }
+        }
+    </script>
+</body>
+</html>
